@@ -1,9 +1,16 @@
 <?php
+   
+   session_start();
 
-include "conexao.php";
+	include "conexao.php";  
+    
+    $nome = $_POST["nome"]; 
+    $telefone = $_POST["telefone"];
+    $endereco = $_POST["endereco"];
+     
+    $string_sql = "INSERT INTO cliente(nome,telefone,endereco) VALUES ('$nome','$telefone','$endereco')"; //String com consulta SQL da inserção
+    echo "Cliente inserido com sucesso";
 
-mysql_query("INSERT INTO cliente(id_cliente,nome,telefone,endereco) VALUES ('','$_POST[nome]','$_POST[telefone]','$_POST[endereco]')") or die ("Não enseriu");
-
-echo "Dados inseridos no banco de dados.";
+    mysqli_query($conn,$string_sql); //Realiza a consulta
 
 ?>
