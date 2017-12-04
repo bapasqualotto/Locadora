@@ -50,7 +50,10 @@ session_start();
             <a class="nav-link js-scroll-trigger" href="#about">Locação e Devolução</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Cliente</a>
+            <a class="nav-link js-scroll-trigger" href="#contact">Cliente e Funcionários</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#consultas">Consultas</a>
           </li>
         </ul>
       </div>
@@ -163,11 +166,21 @@ session_start();
               <button type="submit" >Enviar</button>
             </div>
           </form>
+        </div>
 
-
+  </div>
+</div>
+    <div class="container">
+      <h2 class="text-center">Excluir Cliente</h2>
+      <hr class="star-primary">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
         </div>
         <div class="col-lg-8 mx-auto">
-         <form action="delete.php" method="post">
+        <div>
+         <form action="excluir_cliente.php" method="post">
           <label for="mail">Nome do cliente:</label>
           <input type="text" name="nome" id="nome" />
         </div>
@@ -175,33 +188,156 @@ session_start();
           <button type="submit" >Excluir cliente</button>
         </div>
       </form>
+      </div>
     </div>
   </div>
 </div>
+<div class="container">
+      <h2 class="text-center">Atualizar Cliente</h2>
+      <hr class="star-primary">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+        </div>
+        <div class="col-lg-8 mx-auto">
+        <div>
+         <form action="update_cliente.php" method="post">
+            <div>
+              <label for="name">ID:</label>
+              <input type="text" name="id" id="name" />
+            </div>
+            <div>
+              <label for="name">Nome:</label>
+              <input type="text" name="nome" id="name" />
+            </div>
+            <div>
+              <label for="mail">Telefone:</label>
+              <input type="text" name="telefone" id="tel" />
+            </div>
+            <div>
+              <label for="mail">endereço:</label>
+              <input type="text" name="endereco" id="endereco" />
+            </div>
+
+            <div class="button">
+              <button type="submit" >Enviar</button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="container">
+      <h2 class="text-center">Adicionar Funcionario</h2>
+      <hr class="star-primary">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <form action="inserir_dados_funcionario.php" method="post">
+            <div>
+              <label for="name">Nome:</label>
+              <input type="text" name="nome" id="name" />
+            </div>
+            <div>
+              <label for="mail">Salario:</label>
+              <input type="text" name="salario" id="tel" />
+            </div>
+            <div>
+              <label for="mail">Telefone:</label>
+              <input type="text" name="telefone" id="tel" />
+            </div>
+            <div>
+              <label for="mail">CNPJ da Locadora:</label>
+              <input type="text" name="cnpj" id="endereco" />
+            </div>
+
+            <div class="button">
+              <button type="submit" >Enviar</button>
+            </div>
+          </form>
+        </div>
+
+  </div>
+</div>
+    <div class="container">
+      <h2 class="text-center">Atualizar Funcionario</h2>
+      <hr class="star-primary">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <form action="update_funcionario.php" method="post">
+            <div>
+              <label for="name">ID funcionario:</label>
+              <input type="text" name="id" id="name" />
+            </div>
+            <div>
+              <label for="name">Nome:</label>
+              <input type="text" name="nome" id="name" />
+            </div>
+            <div>
+              <label for="mail">Salario:</label>
+              <input type="text" name="salario" id="tel" />
+            </div>
+            <div>
+              <label for="mail">Telefone:</label>
+              <input type="text" name="telefone" id="tel" />
+            </div>
+            <div>
+              <label for="mail">CNPJ da Locadora:</label>
+              <input type="text" name="cnpj" id="endereco" />
+            </div>
+
+            <div class="button">
+              <button type="submit" >Enviar</button>
+            </div>
+          </form>
+        </div>
+
+  </div>
+</div>
+<div class="container">
+  <h2 class="text-center">Excluir Funcionario</h2>
+  <hr class="star-primary">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+    </div>
+    <div class="col-lg-8 mx-auto">
+      <div>
+       <form action="excluir_funcionario.php" method="post">
+        <label for="mail">ID do funcionário:</label>
+        <input type="text" name="id" id="nome" />
+        <div>
+          <label for="mail">CNPJ da Locadora:</label>
+          <input type="text" name="cnpj" id="nome" />
+        </div>
+      </div>
+      <div class="button">
+        <button type="submit" >Excluir Funcionario</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</div>
 </section>
 
+  <section class="success" id="consultas">
+    <div class="container">
+      <h2 class="text-center">Consultas</h2>
+      <hr class="star-light">
+
+      <form method="get" class="navbar-form navbar-left" role="search" action="valida_dvd.php">
+        <div class="form-group">
+          <input type="text" name="dvd" class="form-control" placeholder="Digite o Código do DVD">
+        </div>
+        <div class="form-group">
+          <input type="text" name="cliente" class="form-control" placeholder="Digite o Nome do Cliente">
+        </div>
+        <button type="submit" class="btn btn-default">Pesquisar</button>
+        <button type="submit" class="btn btn-default">Alugar</button>
+      </form>
+    </div>
+  </section>
 <!-- Footer -->
 <footer class="text-center">
-  <div class="footer-above">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col col-md-4">
-          <h3>Localização</h3>
-          <p>Rosalina Maria Ferreira, 1233
-            <br>Vila Carola, Campo Mourão-PR</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-below">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            Copyright &copy; Locadora 2017
-          </div>
-        </div>
-      </div>
-    </div>
+
   </footer>
 
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
@@ -235,11 +371,76 @@ session_start();
                   </div>
                   <button type="submit" class="btn btn-default">Pesquisar Filme</button>
 
-                </form>               
+                </form> 
+                <h2>Update filme</h2>
+          <div>
+         <form action="update_filme.php" method="post">
+            <div>
+              <label for="name">ID do filme:</label>
+              <input type="text" name="id" id="id" />
+            </div>
+            <div>
+              <label for="name">Novo nome do filme:</label>
+              <input type="text" name="nome" id="name" />
+            </div>
+            <div>
+              <label for="mail">Ano:</label>
+              <input type="text" name="ano" id="ano" />
+            </div>
+            <div>
+              <label for="mail">Genero:</label>
+              <input type="text" name="genero" id="genero" />
+            </div>
+            <div>
+              <label for="mail">Preço:</label>
+              <input type="text" name="preco" id="preco" />
+            </div>
+
+            <div class="button">
+              <button type="submit" >Enviar</button>
+            </div>
+          </form>
+      </div> 
+      <h2>Excluir filme</h2>
+          <div>
+         <form action="excluir_filme.php" method="post">
+            <div>
+              <label for="name">ID:</label>
+              <input type="text" name="id" id="id" />
+            </div>
+            <div class="button">
+              <button type="submit" >Excluir</button>
+            </div>
+          </form>
+      </div>
+      <h2>Adicionar filme</h2>
+          <div>
+         <form action="inserir_dados_filme.php" method="post">
+            <div>
+              <label for="name">Titulo:</label>
+              <input type="text" name="nome" id="name" />
+            </div>
+            <div>
+              <label for="mail">Ano:</label>
+              <input type="text" name="ano" id="ano" />
+            </div>
+            <div>
+              <label for="mail">Genero:</label>
+              <input type="text" name="genero" id="genero" />
+            </div>
+            <div>
+              <label for="mail">Preco:</label>
+              <input type="text" name="preco" id="preco" />
+            </div>
+
+            <div class="button">
+              <button type="submit" >Adicionar</button>
+            </div>
+          </form>
+      </div>                 
+
               </ul>
-              <button class="btn btn-success" type="button" data-dismiss="modal">
-                <i class="fa fa-times"></i>
-                Fechar</button>
+              <button class="btn btn-success" type="button" data-dismiss="modal"><i class="fa fa-times"></i>Fechar</button>
               </div>
             </div>
           </div>
@@ -272,9 +473,65 @@ session_start();
 
                 </form>               
               </ul>
-              <button class="btn btn-success" type="button" data-dismiss="modal">
-                <i class="fa fa-times"></i>
-                Fechar</button>
+              <h2>Update Desenho</h2>
+          <div>
+         <form action="update_desenho.php" method="post">
+            <div>
+              <label for="name">ID do desenho:</label>
+              <input type="text" name="id" id="id" />
+            </div>
+            <div>
+              <label for="name">Novo nome do desenho:</label>
+              <input type="text" name="nome" id="name" />
+            </div>
+            <div>
+              <label for="mail">Ano:</label>
+              <input type="text" name="ano" id="ano" />
+            </div>
+            <div>
+              <label for="mail">Novo preco:</label>
+              <input type="text" name="preco" id="preco" />
+            </div>
+
+            <div class="button">
+              <button type="submit" >Enviar</button>
+            </div>
+          </form>
+        </div> 
+        <h2>Excluir Desenho</h2>
+        <div>
+         <form action="excluir_desenho.php" method="post">
+          <div>
+            <label for="name">ID:</label>
+            <input type="text" name="id" id="id" />
+          </div>
+          <div class="button">
+            <button type="submit" >Excluir</button>
+          </div>
+        </form>
+      </div>
+      <h2>Adicionar Desenho</h2>
+          <div>
+         <form action="inserir_dados_desenho.php" method="post">
+            <div>
+              <label for="name">Titulo:</label>
+              <input type="text" name="nome" id="name" />
+            </div>
+            <div>
+              <label for="mail">Ano:</label>
+              <input type="text" name="ano" id="ano" />
+            </div>
+            <div>
+              <label for="mail">Preco:</label>
+              <input type="text" name="preco" id="preco" />
+            </div>
+
+            <div class="button">
+              <button type="submit" >Adicionar</button>
+            </div>
+          </form>
+      </div>        
+              <button class="btn btn-success" type="button" data-dismiss="modal"><i class="fa fa-times"></i>Fechar</button>
               </div>
             </div>
           </div>
@@ -307,9 +564,81 @@ session_start();
 
                 </form>               
               </ul>
-              <button class="btn btn-success" type="button" data-dismiss="modal">
-                <i class="fa fa-times"></i>
-                Fechar</button>
+              <h2>Update Série</h2>
+          <div>
+         <form action="update_serie.php" method="post">
+            <div>
+              <label for="name">ID da serie:</label>
+              <input type="text" name="id" id="id" />
+            </div>
+            <div>
+              <label for="name">Novo nome:</label>
+              <input type="text" name="nome" id="name" />
+            </div>
+            <div>
+              <label for="mail">Temporada:</label>
+              <input type="text" name="temporada" id="temporada" />
+            </div>
+            <div>
+              <label for="mail">Ano:</label>
+              <input type="text" name="ano" id="ano" />
+            </div>
+            <div>
+              <label for="mail">Genero:</label>
+              <input type="text" name="genero" id="genero" />
+            </div>
+            <div>
+              <label for="mail">Preco:</label>
+              <input type="text" name="preco" id="preco" />
+            </div>
+
+            <div class="button">
+              <button type="submit" >Enviar</button>
+            </div>
+          </form>
+      </div> 
+        <h2>Excluir Serie</h2>
+        <div>
+         <form action="excluir_serie.php" method="post">
+          <div>
+            <label for="name">ID:</label>
+            <input type="text" name="id" id="id" />
+          </div>
+          <div class="button">
+            <button type="submit" >Excluir</button>
+          </div>
+        </form>
+      </div>
+      <h2>Adicionar Serie</h2>
+          <div>
+         <form action="inserir_dados_serie.php" method="post">
+            <div>
+              <label for="name">Titulo:</label>
+              <input type="text" name="nome" id="name" />
+            </div>
+            <div>
+              <label for="mail">Ano:</label>
+              <input type="text" name="ano" id="ano" />
+            </div>
+            <div>
+              <label for="mail">Genero:</label>
+              <input type="text" name="genero" id="genero" />
+            </div>
+              <div>
+              <label for="mail">Temporada:</label>
+              <input type="text" name="temporada" id="temporada" />
+            </div>
+            <div>
+              <label for="mail">Preco:</label>
+              <input type="text" name="preco" id="preco" />
+            </div>
+            <div class="button">
+              <button type="submit" >Adicionar</button>
+            </div>
+          </form>
+      </div>        
+             
+              <button class="btn btn-success" type="button" data-dismiss="modal"><i class="fa fa-times"></i>Fechar</button>
               </div>
             </div>
           </div>
