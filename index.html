@@ -161,7 +161,10 @@ session_start();
               <label for="mail">endereço:</label>
               <input type="text" name="endereco" id="endereco" />
             </div>
-
+            <div>
+              <label for="mail">CNPJ da Locadora:</label>
+              <input type="text" name="cnpj" id="cnpj" />
+            </div>
             <div class="button">
               <button type="submit" >Enviar</button>
             </div>
@@ -320,18 +323,147 @@ session_start();
 
   <section class="success" id="consultas">
     <div class="container">
-      <h2 class="text-center">Consultas</h2>
+      <h2 class="text-center">Consultas de filmes</h2>
       <hr class="star-light">
 
-      <form method="get" class="navbar-form navbar-left" role="search" action="valida_dvd.php">
-        <div class="form-group">
-          <input type="text" name="dvd" class="form-control" placeholder="Digite o Código do DVD">
+      <form method="post" class="navbar-form navbar-left" role="search" action="consulta_1.php">
+        <div>
+          <label for="mail">Digitar Cnpj:</label>
+          <input type="text" name="cnpj" id="cnpj" />
         </div>
-        <div class="form-group">
-          <input type="text" name="cliente" class="form-control" placeholder="Digite o Nome do Cliente">
+          <div class="button">
+          <button type="submit" >Pesquisar</button>
         </div>
-        <button type="submit" class="btn btn-default">Pesquisar</button>
-        <button type="submit" class="btn btn-default">Alugar</button>
+      </form>
+    </div>
+    <div class="container">
+      <h2 class="text-center">Consultas de Clientes</h2>
+      <hr class="star-light">
+
+      <form method="post" class="navbar-form navbar-left" role="search" action="consulta_2.php">
+        <div>
+          <label for="mail">Digitar Cnpj:</label>
+          <input type="text" name="cnpj" id="cnpj" />
+        </div>
+          <div class="button">
+          <button type="submit" >Pesquisar</button>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <h2 class="text-center">Consultas por Preço de filme</h2>
+      <hr class="star-light">
+
+      <form method="post" class="navbar-form navbar-left" role="search" action="consulta_3.php">
+        <div>
+          <label for="mail">Digitar Cnpj:</label>
+          <input type="text" name="cnpj" id="cnpj" />
+        </div>
+        <div>
+          <label for="mail">Digitar o preço sujerido:</label>
+          <input type="text" name="preco" id="preco" />
+        </div>
+          <div class="button">
+          <button type="submit" >Pesquisar</button>
+        </div>
+      </form>
+    </div>
+     <div class="container">
+      <h2 class="text-center">Consultas do Dono</h2>
+      <hr class="star-light">
+
+      <form method="post" class="navbar-form navbar-left" role="search" action="consulta_4.php">
+        <div>
+          <label for="mail">Digitar o Nome do dono:</label>
+          <input type="text" name="nome" id="nome" />
+        </div>
+          <div class="button">
+          <button type="submit" >Pesquisar</button>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <h2 class="text-center">Filmes por Genero:</h2>
+      <hr class="star-light">
+
+      <form method="post" class="navbar-form navbar-left" role="search" action="consulta_5.php">
+        <div>
+          <label for="mail">Digitar o genero:</label>
+          <input type="text" name="genero" id="genero" />
+        </div>
+          <div class="button">
+          <button type="submit" >Pesquisar</button>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <h2 class="text-center">Pesquisa por Nome de Desenho:</h2>
+      <hr class="star-light">
+
+      <form method="post" class="navbar-form navbar-left" role="search" action="consulta_6.php">
+        <div>
+          <label for="mail">Digitar o nome:</label>
+          <input type="text" name="nome" id="nome" />
+        </div>
+          <div class="button">
+          <button type="submit" >Pesquisar</button>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <h2 class="text-center">Pesquisar pelo Maior salário:</h2>
+      <hr class="star-light">
+
+      <form method="post" class="navbar-form navbar-left" role="search" action="consulta_7.php">
+        <div>
+          <label for="mail">Digitar o CNPJ da loja:</label>
+          <input type="text" name="cnpj" id="cnpj" />
+        </div>
+          <div class="button">
+          <button type="submit" >Pesquisar</button>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <h2 class="text-center">Pesquisar por cliente:</h2>
+      <hr class="star-light">
+
+      <form method="post" class="navbar-form navbar-left" role="search" action="consulta_8.php">
+        <div>
+          <label for="mail">Digitar o nome do Cliente:</label>
+          <input type="text" name="cliente" id="cliente" />
+        </div>
+          <div class="button">
+          <button type="submit" >Pesquisar</button>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <h2 class="text-center">Pesquisa de cliente que alugou uma série:</h2>
+      <hr class="star-light">
+
+      <form method="post" class="navbar-form navbar-left" role="search" action="consulta_9.php">
+        <div>
+          <label for="mail">Digitar o nome da Série:</label>
+          <input type="text" name="serie" id="serie" />
+        </div>
+          <div class="button">
+          <button type="submit" >Pesquisar</button>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <h2 class="text-center">Pesquisa de Filme por Locadora:</h2>
+      <hr class="star-light">
+
+      <form method="post" class="navbar-form navbar-left" role="search" action="consulta_10.php">
+        <div>
+          <label for="mail">Digitar o nome do filme:</label>
+          <input type="text" name="titulo" id="titulo" />
+        </div>
+          <div class="button">
+          <button type="submit" >Pesquisar</button>
+        </div>
       </form>
     </div>
   </section>
@@ -432,6 +564,10 @@ session_start();
               <label for="mail">Preco:</label>
               <input type="text" name="preco" id="preco" />
             </div>
+            <div>
+              <label for="mail">CNPJ da Locadora:</label>
+              <input type="text" name="cnpj" id="cnpj" />
+            </div>
 
             <div class="button">
               <button type="submit" >Adicionar</button>
@@ -524,6 +660,10 @@ session_start();
             <div>
               <label for="mail">Preco:</label>
               <input type="text" name="preco" id="preco" />
+            </div>
+            <div>
+              <label for="mail">CNPJ da Locadora:</label>
+              <input type="text" name="cnpj" id="cnpj" />
             </div>
 
             <div class="button">
@@ -632,6 +772,11 @@ session_start();
               <label for="mail">Preco:</label>
               <input type="text" name="preco" id="preco" />
             </div>
+            <div>
+              <label for="mail">CNPJ da Locadora:</label>
+              <input type="text" name="cnpj" id="cnpj" />
+            </div>
+
             <div class="button">
               <button type="submit" >Adicionar</button>
             </div>
